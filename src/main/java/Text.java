@@ -14,8 +14,9 @@ public class Text {
       return 0;
     }
 
-    List<String> splitString = Arrays.asList(text.split(" "));
-    HashSet<String> wordsWithoutDuplicates = new HashSet<>(splitString);
-    return wordsWithoutDuplicates.size();
+    List<String> wordsInText = Arrays.asList(text.split(" "));
+    HashSet<String> wordsInTextWithoutDuplicates = new HashSet<>(wordsInText);
+
+    return wordsInTextWithoutDuplicates.size();
   }
 }
