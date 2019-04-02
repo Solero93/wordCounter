@@ -1,8 +1,12 @@
 public class WordCounter {
-  public WordCounter() {
+  private Text text;
+
+  public WordCounter(Text text) {
+    this.text = text;
   }
 
-  public int count(String text) {
-    return 0;
+  public void showCountOfUniqueWords() {
+    int result = text.countUniqueWords();
+    System.out.println(result);
   }
 }
