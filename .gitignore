@@ -2,6 +2,8 @@
 # Created by https://www.gitignore.io/api/java,gradle,jetbrains
 # Edit at https://www.gitignore.io/?templates=java,gradle,jetbrains
 
+.idea
+
 ### Java ###
 # Compiled class file
 *.class
