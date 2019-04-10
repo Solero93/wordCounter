@@ -6,16 +6,16 @@ import java.util.List;
 
 public class Text {
   private static final String SEPARATOR = " ";
-  private final String text;
+  private final String content;
 
-  public Text(String text) {
-    this.text = text;
+  public Text(String content) {
+    this.content = content;
   }
 
   public List<String> getWords() {
-    if (this.text.length() == 0) {
+    if (this.content.length() == 0) {
       return Collections.emptyList();
     }
-    return Arrays.asList(this.text.split(SEPARATOR));
+    return Arrays.asList(this.content.split(SEPARATOR));
   }
 }
