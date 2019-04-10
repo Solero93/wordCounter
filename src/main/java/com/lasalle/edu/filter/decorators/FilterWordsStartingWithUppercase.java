@@ -1,7 +1,7 @@
 package com.lasalle.edu.filter.decorators;
 
-import com.lasalle.edu.filter.FilterStrategyDecorator;
 import com.lasalle.edu.filter.FilterStrategy;
+import com.lasalle.edu.filter.FilterStrategyDecorator;
 
 import java.util.stream.Stream;
 

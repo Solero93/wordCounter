@@ -1,9 +1,6 @@
 package com.lasalle.edu;
 
-import com.lasalle.edu.Text;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
 
 public class TextTest {
   @Test

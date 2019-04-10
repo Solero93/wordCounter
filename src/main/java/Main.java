@@ -6,6 +6,10 @@ import com.lasalle.edu.filter.decorators.FilterUniqueWords;
 import com.lasalle.edu.filter.decorators.FilterWordsStartingWithUppercase;
 import com.lasalle.edu.filter.decorators.FilterWordsWithMoreThanTwoCharacters;
 import com.lasalle.edu.filter.strategies.NoFilter;
+import com.lasalle.edu.separator.SpaceSeparator;
+import com.lasalle.edu.separator.TextSeparator;
+import com.lasalle.edu.show.ShowStrategy;
+import com.lasalle.edu.show.SystemPrintShow;
 
 public class Main {
   public static void main(String[] args) {
@@ -15,8 +19,13 @@ public class Main {
     filterStrategy = new FilterWordsStartingWithUppercase(filterStrategy);
     filterStrategy = new FilterWordsWithMoreThanTwoCharacters(filterStrategy);
 
-    WordCounter wordCounter = new WordCounter(filterStrategy);
-    Text text = new Text("Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.");
+    ShowStrategy showStrategy = new SystemPrintShow();
+    WordCounter wordCounter = new WordCounter(filterStrategy, showStrategy);
+
+    TextSeparator textSeparator = new SpaceSeparator();
+    String content = "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500.";
+    Text text = new Text(content, textSeparator);
+
     wordCounter.showCount(text);
   }
 }
